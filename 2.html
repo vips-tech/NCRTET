@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCRTET - 2025</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            border-left: 4px solid green;
+            padding-left: 10px;
+            white-space: nowrap;
+        }
+        nav {
+            flex-grow: 1;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: nowrap;
+        }
+        nav ul li {
+            margin: 0 15px;
+            white-space: nowrap;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: lightgreen;
+        }
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background-color: white;
+            flex-direction: row;
+            text-align: left;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .about-text {
+            max-width: 50%;
+            padding-right: 20px;
+        }
+        .about-text h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        .about-text p {
+            text-align: justify;
+            color: #333;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        .about-image {
+            max-width: 50%;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .committee-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background-color: white;
+            flex-direction: column;
+            text-align: center;
+        }
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .committee-member {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out;
+        }
+        .committee-member:hover {
+            background-color: rgb(234, 178, 67);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">| NCRTET - 2025</div>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">COMMITTEE</a></li>
+                <li><a href="#">CALL FOR PAPER</a></li>
+                <li><a href="#">KEYNOTE</a></li>
+                <li><a href="#">PUBLICATION</a></li>
+                <li><a href="#">DATES</a></li>
+                <li><a href="#">PAPER SUBMISSION</a></li>
+                <li><a href="#">REGISTRATION</a></li>
+                <li><a href="#">VENUE</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="about-container">
+        <div class="about-text">
+            <h2>About NCRTET</h2>
+            <p>
+                The NCRTET - 2025 Hybrid Conference (online and offline) is a premier platform for exploring innovations in smart technologies, communication, and robotics. It brings together researchers, professionals, and students to share the latest advancements and network with leading experts. Featuring technical sessions, tutorials, and panels, the conference highlights key areas like high-speed data communication, energy-efficient wireless devices, and GPS-based vehicle positioning. Authors are invited to submit papers, as the event seeks to drive groundbreaking research in telecommunication. Join us to exchange ideas and advance the future of smart technologies.
+            </p>
+        </div>
+        <div class="about-image">
+            <img src="https://www.bing.com/th/id/OGC.bfbe562cdb79724fee53b799aceec724?pid=1.7&rurl=https%3a%2f%2fgifdb.com%2fimages%2fhigh%2fai-finger-print-recognition-zl4ku51ojamo22k9.gif&ehk=N1cv4IXiOcMlQb%2bYWzbnpGkeJzn0nlB9%2b51NXpgoUbQ%3d" alt="AI Technology Representation">
+        </div>
+    </section>
+
+    <section class="committee-container">
+        <h2>Organizing Committee</h2>
+        <div class="committee-grid">
+            <div class="committee-member">Chief Patron: Dr. Natarajan G (Founder Chairman)</div>
+            <div class="committee-member">Chairperson: Mrs. Brindha Natarajan</div>
+            <div class="committee-member">Patron: Dr. Selvakumar C (Principal)</div>
+            <div class="committee-member">Convenor: Mr. Prabu K (AP/ECE)</div>
+            <div class="committee-member">Convenor: Mr. Kannan R (AP/CSE)</div>
+        </div>
+        
+        <h2>Advisory Committee</h2>
+        <div class="committee-grid">
+            <div class="committee-member">Dr. Arunsankar G (Prof/EEE)</div>
+            <div class="committee-member">Dr. Amaladhasan S (Prof/AERO)</div>
+            <div class="committee-member">Dr. Sathish Kumar G (Assoc Prof/IT)</div>
+            <div class="committee-member">Dr. Sathya S (Assoc Prof/ECE)</div>
+            <div class="committee-member">Dr. Vinoth R (AP/IT)</div>
+            <div class="committee-member">Dr. Nafeez Ahmed L (AP/MECH & AUTO)</div>
+            <div class="committee-member">Dr. Joseph Robinson M (S&H)</div>
+            <div class="committee-member">Dr. Suresh Rajan S.G (Prof/MBA)</div>
+        </div>
+        
+        <h2>Coordinators</h2>
+        <div class="committee-grid">
+            <div class="committee-member">Mr. Manikanda Gopalan S (AP/AERO)</div>
+            <div class="committee-member">Mr. Arul V S (AP/CIVIL)</div>
+            <div class="committee-member">Mr. Senthil P (AP/CSE)</div>
+            <div class="committee-member">Mrs. Santhya M (AP/ECE-MED)</div>
+            <div class="committee-member">Mrs. Revathi A (AP/IT-CVB)</div>
+            <div class="committee-member">Mrs. Aarthi R (AP/MECH & AUTO)</div>
+            <div class="committee-member">Dr. Parimala P (AP/S&H)</div>
+            <div class="committee-member">Mrs. Deepa S (AP/MBA)</div>
+        </div>
+    </section>
+</body>
+</html>
