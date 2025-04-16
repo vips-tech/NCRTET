@@ -20,7 +20,7 @@
             display: flex;
             align-items: center;
             padding: 15px 20px;
-            flex-wrap: wrap; /* Allows wrapping */
+            flex-wrap: wrap;
         }
 
         .logo {
@@ -40,13 +40,13 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-wrap: wrap; /* Enables wrapping when needed */
+            flex-wrap: wrap;
             justify-content: flex-end;
         }
 
         nav ul li {
-            margin: 5px 10px; /* Reduce margin to fit better */
-            white-space: nowrap; /* Prevents breaking text */
+            margin: 5px 10px;
+            white-space: nowrap;
         }
 
         nav ul li a {
@@ -59,17 +59,6 @@
         nav ul li a:hover {
             text-decoration: underline;
             color: lightgreen;
-        }
-
-        /* Responsive Fix for Smaller Screens */
-        @media (max-width: 1024px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav ul {
-                justify-content: center;
-            }
         }
 
         /* About Section */
@@ -112,6 +101,10 @@
             border-radius: 10px;
         }
 
+        .orange-text {
+            color: orange;
+        }
+
         /* Committee Section */
         .committee-container {
             display: flex;
@@ -131,24 +124,53 @@
             width: 100%;
             max-width: 800px;
         }
-        .orange-text {
-    color: orange;
-}
-
 
         .committee-member {
-            background-color: #f1f1f1;
+            background-color: white;
             padding: 15px;
             border-radius: 8px;
             font-weight: bold;
             color: #333;
             text-align: center;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 10px white(255, 255, 255, 0.1);
             transition: background-color 0.3s ease-in-out;
         }
 
         .committee-member:hover {
             background-color: rgb(234, 178, 67);
+        }
+
+        /* Responsive Fix for Smaller Screens */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text, .about-image {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .about-text p {
+                text-align: justify;
+                padding: 10px;
+            }
+
+            .about-image img {
+                width: 100%;
+                height: auto;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -160,21 +182,18 @@
             <ul>
                 <li><a href="#">HOME</a></li>
                 <li><a href="#about-section">ABOUT</a></li>
-
                 <li><a href="#committee-container">COMMITTEE</a></li>
                 <li><a href="#paper-section">CALL FOR PAPER</a></li>
-               
                 <li><a href="#publication-section">PUBLICATION</a></li>
                 <li><a href="#important-dates">DATES</a></li>
-                
                 <li><a href="#registration-container">REGISTRATION</a></li>
-             
                 <li><a href="#">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section class="about-container">
+
+    <!-- About Section -->
+    <section class="about-container" id="about-section">
         <div class="about-text">
             <h2><span class="orange-text">About</span> NCRTET 2025</h2>
             <p>
@@ -185,6 +204,7 @@
             <img src="https://www.bing.com/th/id/OGC.bfbe562cdb79724fee53b799aceec724?pid=1.7&rurl=https%3a%2f%2fgifdb.com%2fimages%2fhigh%2fai-finger-print-recognition-zl4ku51ojamo22k9.gif&ehk=N1cv4IXiOcMlQb%2bYWzbnpGkeJzn0nlB9%2b51NXpgoUbQ%3d" alt="AI Technology Representation">
         </div>
     </section>
+
 
 
 
@@ -523,36 +543,41 @@
 
 
 
+<!-- Publication Section -->
 <section id="publication-section">
-    <h2><span class="orange-text">Publication </span></h2>
+    <h2 class="publication-title"><span class="orange-text">Publication</span></h2>
     <p class="publication-subtitle">
         All papers will pass through a multiple peer-review process, and accepted papers will be
-        presented at the conference and Published In Journals.
+        presented at the conference and published in journals.
     </p>
 
     <div class="publication-content">
-        <!-- <h3 class="publication-heading">IEEE Xplore</h3>
+        <!-- Future IEEE Section -->
+        <!-- 
+        <h3 class="publication-heading">IEEE Xplore</h3>
         <p class="publication-text">
             All registered and presented papers will be submitted for inclusion into IEEE Xplore.
-        </p> -->
+        </p> 
+        -->
 
         <h3 class="publication-heading">SCOPUS</h3>
         <p class="publication-text">
-            If a research paper meets high-quality standards, it becomes eligible for publication in reputable journals and can be recommended for SCOPUS indexing. The process begins with rigorous peer review, where experts in the field evaluate the originality, significance, and technical quality of the research. Once a paper is accepted for publication, it undergoes final editorial checks, formatting, and inclusion in the journal’s database. Journals indexed in SCOPUS ensure wider discoverability, making the research accessible to a global academic audience.        </p>
+            If a research paper meets high-quality standards, it becomes eligible for publication in reputable journals and can be recommended for SCOPUS indexing. The process begins with rigorous peer review, where experts in the field evaluate the originality, significance, and technical quality of the research. Once a paper is accepted for publication, it undergoes final editorial checks, formatting, and inclusion in the journal’s database. Journals indexed in SCOPUS ensure wider discoverability, making the research accessible to a global academic audience.
+        </p>
     </div>
 </section>
 
+<!-- CSS Styling -->
 <style>
-    /* Section Styling */
+    /* Publication Section Styling */
     #publication-section {
-        padding: 50px;
+        padding: 50px 20px;
         text-align: center;
-        background: linear-gradient(to bottom, white, white); /* Light gradient effect */
+        background: linear-gradient(to bottom, white, white);
     }
 
-    /* Title Styling */
     .publication-title {
-        font-size: 32px; /* Increased size */
+        font-size: 32px;
         font-weight: bold;
         color: #000;
         text-transform: uppercase;
@@ -561,7 +586,6 @@
         padding-bottom: 10px;
     }
 
-    /* Title Underline */
     .publication-title::after {
         content: "";
         display: block;
@@ -571,37 +595,57 @@
         margin: 10px auto 0;
     }
 
-    /* Subtitle Styling */
     .publication-subtitle {
-        font-size: 20px; /* Increased size */
+        font-size: 20px;
         font-weight: bold;
         color: orange;
-        max-width: 900px; /* Increased width */
+        max-width: 900px;
         margin: 20px auto;
         line-height: 1.6;
     }
 
-    /* Increased Width for Better Layout */
     .publication-content {
         text-align: left;
-        max-width: 1200px; /* Increased container width */
+        max-width: 1200px;
         margin: auto;
         padding: 20px;
     }
 
-    /* Headings */
     .publication-heading {
-        font-size: 22px; /* Increased size */
+        font-size: 22px;
         font-weight: bold;
-        color:orange;
+        color: orange;
         margin-top: 25px;
     }
 
-    /* Text */
     .publication-text {
-        font-size: 18px; /* Increased size */
+        font-size: 18px;
         color: #000;
         line-height: 1.8;
+        text-align: justify;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .publication-content {
+            padding: 10px;
+        }
+
+        .publication-title {
+            font-size: 28px;
+        }
+
+        .publication-subtitle {
+            font-size: 18px;
+        }
+
+        .publication-heading {
+            font-size: 20px;
+        }
+
+        .publication-text {
+            font-size: 16px;
+        }
     }
 </style>
 
@@ -719,108 +763,131 @@
 
 
 
-
 <section id="paper-submission">
     <h2><span class="orange-text">Paper </span>Submission</h2>
-
-    <p class="submission-text">Full paper submission to ncrtet25@gsbt.edu.in</p>
-    <!-- <button class="submission-button">Click Here</button>
-    <p class="submission-note"></p> -->
+  
+    <p class="submission-text">Full paper submission to <a href="mailto:ncrtet25@gsbt.edu.in">ncrtet25@gsbt.edu.in</a></p>
+  
     <button class="submission-button" onclick="redirectToForm()">Click Here</button>
     <p class="submission-note"></p>
-    
+  
     <script>
       function redirectToForm() {
-        // Replace with the *FORM VIEW* URL, not the edit one
-        window.location.href = "https://docs.google.com/forms/d/1scKvX55r-cE8S7v4K21kP-l4ZQXIK0Gm7jYyiAG9b2s/edit";
+        window.location.href = "https://docs.google.com/forms/d/1scKvX55r-cE8S7v4K21kP-l4ZQXIK0Gm7jYyiAG9b2s/viewform";
       }
     </script>
-    
-    <p class="plagiarism-content">
-        <strong>Possible Plagiarism Scenarios</strong><br>
-        Plagiarism can take various forms, combining multiple factors. Below are key scenarios, starting with the most severe:<br><br>
-
-        <strong>1. Uncredited Full or Major Copying (50%+)</strong><br>
-        Copying a large portion of a paper without citation, quotation marks, or references.  
-        Combining sections from multiple sources without attribution.<br><br>
-
-        <strong>2. Uncredited Copying Across Multiple Papers (50%+)</strong><br>
-        Plagiarism spread across several papers by the same author, summing to over 50%.<br><br>
-
-        <strong>3. Uncredited Large Copying (20–50%)</strong><br>
-        Copying a significant portion from another paper without proper citation.<br><br>
-
-        <strong>4. Uncredited Copying Across Multiple Papers (20–50%)</strong><br>
-        Combined plagiarism across papers equating to 20–50% of the shortest paper.<br><br>
-
-        <strong>5. Uncredited Copying of Smaller Elements (Up to 20%)</strong><br>
-        Copying paragraphs, sentences, or illustrations without proper attribution.<br><br>
-
-        <strong>6. Uncredited Improper Paraphrasing</strong><br>
-        Changing only a few words or rearranging sentences without citation.<br><br>
-
-        <strong>7. Credited Copying Without Clear Delineation</strong><br>
-        Providing credit but failing to use quotation marks or formatting to distinguish copied material.<br><br>
-    </p>
-
+  
+    <div class="plagiarism-content">
+      <strong>Possible Plagiarism Scenarios</strong><br>
+      Plagiarism can take various forms, combining multiple factors. Below are key scenarios, starting with the most severe:<br><br>
+  
+      <strong>1. Uncredited Full or Major Copying (50%+)</strong><br>
+      Copying a large portion of a paper without citation, quotation marks, or references.  
+      Combining sections from multiple sources without attribution.<br><br>
+  
+      <strong>2. Uncredited Copying Across Multiple Papers (50%+)</strong><br>
+      Plagiarism spread across several papers by the same author, summing to over 50%.<br><br>
+  
+      <strong>3. Uncredited Large Copying (20–50%)</strong><br>
+      Copying a significant portion from another paper without proper citation.<br><br>
+  
+      <strong>4. Uncredited Copying Across Multiple Papers (20–50%)</strong><br>
+      Combined plagiarism across papers equating to 20–50% of the shortest paper.<br><br>
+  
+      <strong>5. Uncredited Copying of Smaller Elements (Up to 20%)</strong><br>
+      Copying paragraphs, sentences, or illustrations without proper attribution.<br><br>
+  
+      <strong>6. Uncredited Improper Paraphrasing</strong><br>
+      Changing only a few words or rearranging sentences without citation.<br><br>
+  
+      <strong>7. Credited Copying Without Clear Delineation</strong><br>
+      Providing credit but failing to use quotation marks or formatting to distinguish copied material.<br><br>
+    </div>
+  
     <p class="plagiarism-policy">
-        <a href="https://www.ieee.org/publications/rights/plagiarism/id-plagiarism.html" target="_blank">IEEE Plagiarism Policy</a>
+      <a href="https://www.ieee.org/publications/rights/plagiarism/id-plagiarism.html" target="_blank">IEEE Plagiarism Policy</a>
     </p>
-</section>
-
-<style>
+  </section>
+  
+  <style>
     #paper-submission {
-        text-align: center;
-        background: white;
-        padding: 50px;
-        border-radius: 10px;
+      text-align: center;
+      background: white;
+      padding: 50px;
+      border-radius: 10px;
     }
+  
     .submission-title {
-        font-size: 28px;
-        font-weight: bold;
-        color: #000;
+      font-size: 28px;
+      font-weight: bold;
+      color: #000;
     }
+  
     .submission-text {
-        font-size: 18px;
-        margin: 15px 0;
+      font-size: 18px;
+      margin: 15px 0;
     }
+  
+    .submission-text a {
+      color: orange;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  
     .submission-button {
-        background: orange;
-        color: white;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+      background: orange;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
+  
     .submission-button:hover {
-        background: #009624;
+      background: #009624;
     }
+  
     .submission-note {
-        font-size: 16px;
-        margin: 20px 0;
-        color: #333;
+      font-size: 16px;
+      margin: 20px 0;
+      color: #333;
     }
+  
     .plagiarism-content {
-        text-align: left;
-        font-size: 16px;
-        margin: 20px 0;
-        color: #333;
-        padding: 20px;
-        background: #f9f9f9;
-        border-radius: 10px;
+      text-align: left;
+      font-size: 16px;
+      margin: 20px auto;
+      color: #333;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      max-width: 900px;
+      line-height: 1.8;
     }
+  
+    .plagiarism-content strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #000;
+    }
+  
+    .plagiarism-policy {
+      margin-top: 20px;
+    }
+  
     .plagiarism-policy a {
-        color: orange;
-        font-weight: bold;
-        text-decoration: none;
+      color: orange;
+      font-weight: bold;
+      text-decoration: none;
     }
-</style>
-
-
-
-    </section>
-
+  
+    .plagiarism-policy a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  
 
 
 
@@ -914,78 +981,160 @@
     </style>
 </head>
 <body>
-
-<section class="registration-container">
-    
-
-
-    <h2 style="color: #ffa500; font-size: 24px; font-weight: bold; width: 100%; height: 50px; text-align: center; line-height: 50px;">
-        Registration
-    </h2>
-
-    <h3 class="category-title"></h3>
-    <h3 class="category-title"></h3>
-
-    <table style="width: 800px; margin: 0 auto; border-collapse: collapse; font-size: 14px;">
-        <tr>
-            <td style="border: 1px solid black; padding: 6px;">Students/Full-Time Research Scholars</td>
-            <td style="border: 1px solid black; padding: 6px;">INR 750</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid black; padding: 6px;">Faculty/Industrial Person</td>
-            <td style="border: 1px solid black; padding: 6px;">INR 1000</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid black; padding: 6px;">Industry</td>
-            <td style="border: 1px solid black; padding: 6px;">INR 2000</td>
-        </tr>
-    </table>
-    <!-- <h3 class="highlight-text">Payment Details</h3>
-    <table class="payment-box">
-        <tr>
-            <td>Mode of Payment</td>
-        </tr>
-        <tr>
-            <td class="highlight-text">Gpay
-            </td>
-        </tr>
-        <tr>
-            <td class="highlight-text">Phonepe
-            </td>
-        </tr>
-        <tr>
-            <td class="highlight-text">Paytm
-            </td>
-        </tr>
-
- 
-    </table> -->
-
-
-    <h3 style="color: orange; text-align: center;">Payment Details</h3>
-
-<table style="width: 300px; margin: 0 auto; border: 1px solid #ccc; background-color: #f5f5f5; border-radius: 10px; text-align: center; font-size: 14px;">
-    <tr>
-        <td style="font-weight: bold; padding: 8px;">Mode of Payment</td>
-    </tr>
-    <tr>
-        <td style="color: orange; padding: 4px;"><b>Gpay</b></td>
-    </tr>
-    <tr>
-        <td style="color: orange; padding: 4px;"><b>PhonePe</b></td>
-    </tr>
-    <tr>
-        <td style="color: orange; padding: 4px;"><b>Paytm</b></td>
-    </tr>
-    
-    <tr>
-        <td style="padding: 10px;">
-            <img src="payment.jpeg" alt="QR Code for Payment" style="width: 200px; height: 200px; margin-top: 10px;">
-        </td>
-    </tr>
-</table>
-
-</section>
+    <section class="registration-container">
+        <h2 class="registration-title">Registration</h2>
+      
+        <table class="registration-table">
+          <tr>
+            <td>Students / Full-Time Research Scholars</td>
+            <td>INR 750</td>
+          </tr>
+          <tr>
+            <td>Faculty / Industrial Person</td>
+            <td>INR 1000</td>
+          </tr>
+          <tr>
+            <td>Industry</td>
+            <td>INR 2000</td>
+          </tr>
+        </table>
+      
+        <h3 class="payment-heading">Payment Details</h3>
+      
+        <div class="payment-container">
+          <div class="payment-method-title">Mode of Payment</div>
+          <div class="payment-method"><b>GPay</b></div>
+          <div class="payment-method"><b>PhonePe</b></div>
+          <div class="payment-method"><b>Paytm</b></div>
+          <div class="upi-id">UPI ID: sanjaydeva1605-1@okaxis</div>
+          <div class="qr-container">
+            <img src="payment.jpeg" alt="QR Code for Payment" class="payment-qr">
+          </div>
+        </div>
+    </section>
+      
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+      
+      .registration-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+      }
+      
+      .registration-title {
+        color: #ffa500;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      .registration-table {
+        width: 100%;
+        margin: 0 auto 30px;
+        border-collapse: collapse;
+        font-size: 16px;
+      }
+      
+      .registration-table td {
+        border: 1px solid #000;
+        padding: 12px 15px;
+        text-align: left;
+      }
+      
+      .payment-heading {
+        color: orange;
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      
+      .payment-container {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 15px;
+      }
+      
+      .payment-method-title {
+        font-weight: bold;
+        color: #000;
+        background-color: #eaeaea;
+        padding: 10px;
+        text-align: center;
+        margin: -15px -15px 15px -15px;
+        border-radius: 10px 10px 0 0;
+        border-bottom: 1px solid #ccc;
+      }
+      
+      .payment-method {
+        padding: 8px 0;
+        color: orange;
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      .upi-id {
+        padding: 10px 0;
+        text-align: center;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .qr-container {
+        text-align: center;
+        margin-top: 15px;
+      }
+      
+      .payment-qr {
+        width: 180px;
+        height: 180px;
+        border: 2px solid #fff9f9;
+        border-radius: 8px;
+      }
+      
+      @media (max-width: 600px) {
+        .registration-table td {
+          padding: 10px;
+          font-size: 14px;
+        }
+        
+        .registration-title {
+          font-size: 22px;
+        }
+        
+        .payment-heading {
+          font-size: 18px;
+        }
+        
+        .payment-container {
+          padding: 10px;
+        }
+        
+        .payment-qr {
+          width: 160px;
+          height: 160px;
+        }
+      }
+    </style>
+</body>  
 <br>
 <br>
 
